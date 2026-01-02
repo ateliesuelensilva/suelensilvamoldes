@@ -48,15 +48,14 @@
                 foto: "https://i.postimg.cc/Z0t0kFT8/Base-de-blusa-grade.png", 
                 descricao: "Molde em PDF graduado do 36 ao 46. Instruções inclusas."
             },
-            {
+{
                 id: 2,
                 nome: "Molde Blusa de alcinha",
                 preco: 29.90,
                 categoria: "Blusas",
-                foto: "https://i.postimg.cc/R0ZVfv4g/IMG-5302-removebg-preview.png", 
+                foto: "https://i.postimg.cc/N0CGkZjz/56746AB8-F15D-43C2-9AA8-B8CE52F6F41A-removebg-preview.png", 
                 descricao: "Molde em PDF graduado do 36 ao 46. Instruções inclusas."
             }
-
                     ];
 
         // ====================================================================
@@ -149,7 +148,7 @@
                             {produtosFiltrados.map(prod => (
                                 <div key={prod.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 flex flex-col hover:shadow-md transition">
                                     <div className="h-64 overflow-hidden relative group">
-                                        <img src={prod.foto} alt={prod.nome} className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+                                        <img src={prod.foto} alt={prod.nome} className="w-full h-full object-contain transition duration-500 group-hover:scale-110" />
                                         <div className="absolute top-2 right-2 bg-white/90 px-2 py-1 text-xs font-bold rounded text-gray-700">PDF</div>
                                     </div>
                                     <div className="p-4 flex flex-col flex-1">
@@ -197,7 +196,7 @@
                                     ) : (
                                         carrinho.map(item => (
                                             <div key={item.id} className="flex gap-3 mb-4 bg-white p-2 rounded border">
-                                                <img src={item.foto} className="w-16 h-16 object-cover rounded" />
+                                                <img src={item.foto} className="w-16 h-16 object-contain rounded" />
                                                 <div className="flex-1">
                                                     <h4 className="font-bold text-sm">{item.nome}</h4>
                                                     <div className="flex justify-between items-center mt-1">
@@ -234,6 +233,4 @@
         root.render(<App />);
     </script>
 </body>
-
 </html>
-
